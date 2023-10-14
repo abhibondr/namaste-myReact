@@ -50,3 +50,11 @@
   display: flex;
   flex-wrap: wrap;
 }
+
+.filter {
+  margin: 10px;
+}
+
+.filter-btn {
+  cursor: pointer;
+}
