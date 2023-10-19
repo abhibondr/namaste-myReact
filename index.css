@@ -75,3 +75,11 @@
   padding: 5px 15px;
   cursor: pointer;
 }
+
+.filter {
+  display: flex;
+}
+
+.searchText {
+  margin: 0px 10px;
+}

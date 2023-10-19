@@ -5,6 +5,7 @@ import Shimmer from "./Shimmer";
 
 const Body = () => {
   const [restaurentList, setRestaurentList] = useState([]);
+  const [searchText, setSearchText] = useState("");
 
   const fetchData = async () => {
     try {
@@ -16,7 +17,7 @@ const Body = () => {
       console.log(json);
       setRestaurentList(
         //optional chaining
-        json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
+        json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle
           ?.restaurants || []
       );
     } catch (error) {
@@ -33,6 +34,21 @@ const Body = () => {
   ) : (
     <div className="body">
       <div className="filter">
+        <div className="searchText">
+          <input
+            type="text"
+            className="search-box"
+            value={searchText}
+            onChange={(e) => setSearchText(e.target.value)}
+          />
+          <button
+            onClick={() => {
+              console.log(searchText);
+            }}
+          >
+            Search
+          </button>
+        </div>
         <button
           className="filter-btn"
           onClick={() => {
