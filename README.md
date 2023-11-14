@@ -19,3 +19,8 @@
 - HTTPs
 - Tree shaking - (Remove unused code)
 - Different development and production build
+
+# 2 Types of Routing in web App
+
+- Client Side Routing
+- Server Side Routing
