@@ -15,15 +15,19 @@ const Body = () => {
       );
 
       const json = await data.json();
-      console.log(json);
+      console.log(
+        "data:",
+        json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle
+          ?.restaurants
+      );
       setRestaurentList(
         //optional chaining
-        json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle
+        json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle
           ?.restaurants || []
       );
 
       setFilteredRes(
-        json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle
+        json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle
           ?.restaurants || []
       );
     } catch (error) {

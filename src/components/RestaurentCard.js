@@ -10,6 +10,7 @@ const RestaurentCard = (props) => {
     areaName,
     avgRating,
     costForTwo,
+    sla,
   } = resObj?.info;
   return (
     <div className="resto-card" style={{ backgroundColor: "lightgrey" }}>
@@ -27,6 +28,7 @@ const RestaurentCard = (props) => {
       </h5>
       <h4>{avgRating} stars</h4>
       <h4>{costForTwo}</h4>
+      <h5>DeliveryTime: {sla?.slaString}</h5>
     </div>
   );
 };
